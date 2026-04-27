@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>รายวิชา EMS — คณะสัตวแพทยศาสตร์ มก.</title>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #faf9f6;
+    --card: #ffffff;
+    --border: #e2e0d8;
+    --text: #1a1a18;
+    --muted: #6b6966;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Sarabun', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 40px 24px 60px;
+  }
+  header { text-align: center; margin-bottom: 36px; }
+  .header-tag {
+    display: inline-block;
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.08em;
+    color: #0F6E56; background: #E1F5EE;
+    border: 1px solid #9FE1CB;
+    border-radius: 20px; padding: 4px 14px;
+    margin-bottom: 14px; text-transform: uppercase;
+  }
+  h1 { font-size: clamp(18px, 3vw, 26px); font-weight: 600; margin-bottom: 6px; }
+  .subtitle { font-size: 14px; color: var(--muted); }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    max-width: 1100px;
+    margin: 0 auto 24px;
+  }
+  @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
+  @media (max-width: 1024px) and (min-width: 769px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+
+  .group-card {
+    background: var(--card);
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .group-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+  }
+  .group-head { padding: 14px 18px; }
+  .group-icon { font-size: 20px; margin-bottom: 6px; }
+  .group-title { font-size: 15px; font-weight: 600; }
+  .group-count { font-size: 12px; margin-top: 2px; opacity: 0.75; }
+
+  .subject-list { padding: 10px 16px 14px; }
+  .subject-item {
+    padding: 8px 0;
+    border-bottom: 0.5px solid var(--border);
+    font-size: 13px;
+  }
+  .subject-item:last-child { border-bottom: none; }
+  .subject-code { font-size: 10px; color: var(--muted); margin-bottom: 2px; font-family: monospace; }
+  .subject-name { font-size: 13px; color: var(--text); line-height: 1.4; margin-bottom: 4px; }
+  .place-tag {
+    display: inline-block;
+    font-size: 11px; padding: 2px 9px;
+    border-radius: 12px; font-weight: 500;
+  }
+
+  .total-bar {
+    max-width: 1100px; margin: 0 auto;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 24px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px;
+  }
+  .total-left { font-size: 14px; color: var(--muted); }
+  .total-highlights { display: flex; gap: 24px; flex-wrap: wrap; margin-top: 6px; }
+  .highlight-item { font-size: 13px; color: var(--text); display: flex; align-items: center; gap: 6px; }
+  .highlight-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+  .total-right { text-align: right; flex-shrink: 0; }
+  .total-num { font-size: 36px; font-weight: 600; color: var(--text); line-height: 1; }
+  .total-label { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+  footer { text-align: center; margin-top: 40px; font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Early Mover System</div>
+  <h1>รายวิชาการเรียนรู้จากสถานประกอบการ</h1>
+  <p class="subtitle">หลักสูตรสัตวแพทยศาสตรบัณฑิต คณะสัตวแพทยศาสตร์ มหาวิทยาลัยเกษตรศาสตร์ วิทยาเขตกำแพงแสน</p>
+</header>
+
+<div class="grid">
+
+  <!-- กลุ่ม 1: สัตวเล็ก -->
+  <div class="group-card">
+    <div class="group-head" style="background:#E1F5EE">
+      <div class="group-title" style="color:#085041">สัตวเล็กและสัตว์เลี้ยง</div>
+      <div class="group-count" style="color:#0F6E56">4 รายวิชา</div>
+    </div>
+    <div class="subject-list">
+      <div class="subject-item">
+        <div class="subject-code">01504671</div>
+        <div class="subject-name">การเรียนรู้จากสถานประกอบการในสถานพยาบาลสัตว์เล็กเอกชน</div>
+        <span class="place-tag" style="background:#E1F5EE;color:#085041">คลินิก / โรงพยาบาลสัตว์เอกชน</span>
+      </div>
+      <div class="subject-item">
+        <div class="subject-code">01504672</div>
+        <div class="subject-name">การเรียนรู้จากสถานประกอบการในอุตสาหกรรมสัตว์เลี้ยง</div>
+        <span class="place-tag" style="background:#E1F5EE;color:#085041">บริษัท Pet Industry</span>
+      </div>
+      <div class="subject-item">
+        <div class="subject-code">01504682</div>
+        <div class="subject-name">การเรียนรู้จากสถานประกอบการในการจัดการสุขภาพสัตว์เลี้ยงชนิดพิเศษ</div>
+        <span class="place-tag" style="background:#E1F5EE;color:#085041">Exotic Animal Clinic</span>
+      </div>
+      <div class="subject-item">
+        <div class="subject-code">01507653</div>
+        <div class="subject-name">การเรียนรู้จากสถานประกอบการในสัตวแพทยสาธารณสุขด้านสัตว์เล็ก</div>
+        <span class="place-tag" style="background:#E1F5EE;color:#085041">คลินิก / รพ.สัตว์ (VPH)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- กลุ่ม 2: ปศุสัตว์ -->
+  <div class="group-card">
+    <div class="group-head" style="background:#FAEEDA">
+      <div class="group-title" style="color:#412402">ปศุสัตว์</div>
+      <div class="group-count" style="color:#633806">5 รายวิชา</div>
+    </div>
+    <div class="subject-list">
+      <div class="subject-item">
+        <div class="subject-code">01505651</div>
+        <div class="subject-name">การเรียนรู้จากสถานประกอบการในฟาร์มโคเนื้อ</div>
+        <span class="place-tag" style="background:#FAEEDA;color:#412402">ฟาร์มโคเนื้อ</span>
+      </div>
+      <div class="subject-item">
+        <div class="subject-code">01505652</div>
+        <div class="subject-name">การเรียนรู้จากสถานประกอบการในฟาร์มสัตว์เคี้ยวเอื้องขนาดเล็ก</div>
+        <span class="place-tag" style="background:#FAEEDA;color:#412402">ฟาร์มแพะ / แกะ</span>
+      </div>
+      <div class="subject-item">
+        <div class="subject-code">01505653</div>
+        <div class="subject-name">การเรียนรู้จากสถานประกอบการในฟาร์มโคนม</div>
+        <span class="place-tag" style="background:#FAEEDA;color:#412402">ฟาร์มโคนม</span>
+      </div>
+      <div class="subject-item">
+        <div class="subject-code">01505661</div>
+        <div class="subject-name">การเรียนรู้จากสถานประกอบการในอุตสาหกรรมการผลิตสุกร</div>
+        <span class="place-tag" style="background:#FAEEDA;color:#412402">บริษัทสุกรขนาดใหญ่</span>
+      </div>
+      <div class="subject-item">
+        <div class="subject-code">01505662</div>
+        <div class="subject-name">การเรียนรู้จากสถานประกอบการในฟาร์มสุกร</div>
+        <span class="place-tag" style="background:#FAEEDA;color:#412402">ฟาร์มสุกร</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- กลุ่ม 3: สัตว์ปีก -->
+  <div class="group-card">
+    <div class="group-head" style="background:#EEEDFE">
+      <div class="group-title" style="color:#26215C">สัตว์ปีก</div>
+      <div class="group-count" style="color:#3C3489">2 รายวิชา</div>
+    </div>
+    <div class="subject-list">
+      <div class="subject-item">
+        <div class="subject-code">01506651</div>
+        <div class="subject-name">การเรียนรู้จากสถานประกอบการในสถานที่ฟักไข่และฟาร์มสัตว์ปีกเศรษฐกิจ</div>
+        <span class="place-tag" style="background:#EEEDFE;color:#26215C">ฟาร์ม / โรงฟักไข่</span>
+      </div>
+      <div class="subject-item">
+        <div class="subject-code">01506652</div>
+        <div class="subject-name">การเรียนรู้จากสถานประกอบการในอุตสาหกรรมการผลิตสัตว์ปีก</div>
+        <span class="place-tag" style="background:#EEEDFE;color:#26215C">บริษัทสัตว์ปีกขนาดใหญ่</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- กลุ่ม 4: สัตว์น้ำ -->
+  <div class="group-card">
+    <div class="group-head" style="background:#E6F1FB">
+      <div class="group-title" style="color:#042C53">สัตว์น้ำ</div>
+      <div class="group-count" style="color:#0C447C">2 รายวิชา</div>
+    </div>
+    <div class="subject-list">
+      <div class="subject-item">
+        <div class="subject-code">01506661</div>
+        <div class="subject-name">การเรียนรู้จากสถานประกอบการในฟาร์มสัตว์น้ำเศรษฐกิจ</div>
+        <span class="place-tag" style="background:#E6F1FB;color:#042C53">ฟาร์มสัตว์น้ำ</span>
+      </div>
+      <div class="subject-item">
+        <div class="subject-code">01506662</div>
+        <div class="subject-name">การเรียนรู้จากสถานประกอบการในธุรกิจสัตว์น้ำเศรษฐกิจ</div>
+        <span class="place-tag" style="background:#E6F1FB;color:#042C53">บริษัท / Processing Plant</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- กลุ่ม 5: สัตว์ป่า -->
+  <div class="group-card">
+    <div class="group-head" style="background:#FAECE7">
+      <div class="group-title" style="color:#4A1B0C">สัตว์ป่าและสัตว์พิเศษ</div>
+      <div class="group-count" style="color:#712B13">2 รายวิชา</div>
+    </div>
+    <div class="subject-list">
+      <div class="subject-item">
+        <div class="subject-code">01504681</div>
+        <div class="subject-name">การเรียนรู้จากสถานประกอบการในการจัดการสุขภาพและอนุรักษ์สัตว์ป่า</div>
+        <span class="place-tag" style="background:#FAECE7;color:#4A1B0C">สวนสัตว์ / ศูนย์อนุรักษ์</span>
+      </div>
+      <div class="subject-item">
+        <div class="subject-code">01504683</div>
+        <div class="subject-name">การเรียนรู้จากสถานประกอบการในการจัดการสุขภาพม้า</div>
+        <span class="place-tag" style="background:#FAECE7;color:#4A1B0C">ฟาร์มม้า / สนามแข่ง</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- กลุ่ม 6: ราชการ -->
+  <div class="group-card">
+    <div class="group-head" style="background:#EAF3DE">
+      <div class="group-title" style="color:#173404">สาธารณสุขและราชการ</div>
+      <div class="group-count" style="color:#27500A">2 รายวิชา</div>
+    </div>
+    <div class="subject-list">
+      <div class="subject-item">
+        <div class="subject-code">01507651</div>
+        <div class="subject-name">การเรียนรู้จากสถานประกอบการในเวชศาสตร์ป้องกันทางสัตวแพทย์</div>
+        <span class="place-tag" style="background:#EAF3DE;color:#173404">ปศุสัตว์จังหวัด / กรมปศุสัตว์</span>
+      </div>
+      <div class="subject-item">
+        <div class="subject-code">01507652</div>
+        <div class="subject-name">การเรียนรู้จากสถานประกอบการในงานบริการสัตวแพทย์ด้านความปลอดภัยอาหาร</div>
+        <span class="place-tag" style="background:#EAF3DE;color:#173404">กรมปศุสัตว์ / โรงฆ่าสัตว์ / FDA</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="total-bar">
+  <div class="total-left">
+    <div style="font-size:14px;font-weight:500;color:#1a1a18;margin-bottom:8px">ครอบคลุม 6 กลุ่มสถานประกอบการ — รองรับนิสิตทุกสายงานวิชาชีพสัตวแพทย์</div>
+    <div class="total-highlights">
+      <span class="highlight-item"><span class="highlight-dot" style="background:#1D9E75"></span>สัตวเล็กและสัตว์เลี้ยง 4 วิชา</span>
+      <span class="highlight-item"><span class="highlight-dot" style="background:#BA7517"></span>ปศุสัตว์ 5 วิชา</span>
+      <span class="highlight-item"><span class="highlight-dot" style="background:#534AB7"></span>สัตว์ปีก 2 วิชา</span>
+      <span class="highlight-item"><span class="highlight-dot" style="background:#185FA5"></span>สัตว์น้ำ 2 วิชา</span>
+      <span class="highlight-item"><span class="highlight-dot" style="background:#993C1D"></span>สัตว์ป่าและพิเศษ 2 วิชา</span>
+      <span class="highlight-item"><span class="highlight-dot" style="background:#3B6D11"></span>สาธารณสุขและราชการ 2 วิชา</span>
+    </div>
+  </div>
+  <div class="total-right">
+    <div class="total-num">17</div>
+    <div class="total-label">รายวิชา EMS</div>
+  </div>
+</div>
+
+<footer>งานบริการการศึกษา คณะสัตวแพทยศาสตร์ มก. กำแพงแสน</footer>
+
+</body>
+</html>
